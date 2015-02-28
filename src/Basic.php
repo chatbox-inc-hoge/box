@@ -24,14 +24,14 @@
  * THE SOFTWARE.
  */
 
-namespace Pimple;
+namespace Chatbox\Box;
 
 /**
  * Container main class.
  *
  * @author  Fabien Potencier
  */
-class Container implements \ArrayAccess
+class Basic implements \ArrayAccess
 {
     private $values = array();
     private $factories;

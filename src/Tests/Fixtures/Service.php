@@ -24,23 +24,12 @@
  * THE SOFTWARE.
  */
 
-namespace Pimple;
+namespace Chatbox\Box\Tests\Fixtures;
 
 /**
- * Pimple service provider interface.
- *
- * @author  Fabien Potencier
- * @author  Dominik Zogg
+ * @author  Igor Wiedler <igor@wiedler.ch>
  */
-interface ServiceProviderInterface
+class Service
 {
-    /**
-     * Registers services on the given container.
-     *
-     * This method should only be used to configure services and parameters.
-     * It should not get services.
-     *
-     * @param Container $pimple An Container instance
-     */
-    public function register(Container $pimple);
+    public $value;
 }

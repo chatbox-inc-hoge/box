@@ -24,9 +24,9 @@
  * THE SOFTWARE.
  */
 
-namespace Pimple\Tests;
+namespace Chatbox\Box\Tests;
 
-use Pimple\Container;
+use Chatbox\Box\Basic as Container;
 
 /**
  * @author  Dominik Zogg <dominik.zogg@gmail.com>
@@ -41,13 +41,13 @@ class PimpleServiceProviderInterfaceTest extends \PHPUnit_Framework_TestCase
         $pimpleServiceProvider->register($pimple);
 
         $this->assertEquals('value', $pimple['param']);
-        $this->assertInstanceOf('Pimple\Tests\Fixtures\Service', $pimple['service']);
+        $this->assertInstanceOf('Chatbox\Box\Tests\Fixtures\Service', $pimple['service']);
 
         $serviceOne = $pimple['factory'];
-        $this->assertInstanceOf('Pimple\Tests\Fixtures\Service', $serviceOne);
+        $this->assertInstanceOf('Chatbox\Box\Tests\Fixtures\Service', $serviceOne);
 
         $serviceTwo = $pimple['factory'];
-        $this->assertInstanceOf('Pimple\Tests\Fixtures\Service', $serviceTwo);
+        $this->assertInstanceOf('Chatbox\Box\Tests\Fixtures\Service', $serviceTwo);
 
         $this->assertNotSame($serviceOne, $serviceTwo);
     }
@@ -63,13 +63,13 @@ class PimpleServiceProviderInterfaceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('value', $pimple['param']);
         $this->assertEquals('anotherValue', $pimple['anotherParameter']);
 
-        $this->assertInstanceOf('Pimple\Tests\Fixtures\Service', $pimple['service']);
+        $this->assertInstanceOf('Chatbox\Box\Tests\Fixtures\Service', $pimple['service']);
 
         $serviceOne = $pimple['factory'];
-        $this->assertInstanceOf('Pimple\Tests\Fixtures\Service', $serviceOne);
+        $this->assertInstanceOf('Chatbox\Box\Tests\Fixtures\Service', $serviceOne);
 
         $serviceTwo = $pimple['factory'];
-        $this->assertInstanceOf('Pimple\Tests\Fixtures\Service', $serviceTwo);
+        $this->assertInstanceOf('Chatbox\Box\Tests\Fixtures\Service', $serviceTwo);
 
         $this->assertNotSame($serviceOne, $serviceTwo);
     }

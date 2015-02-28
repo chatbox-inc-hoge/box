@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Pimple\Tests\Fixtures;
+namespace Chatbox\Box\Tests\Fixtures;
 
 class Invokable
 {
